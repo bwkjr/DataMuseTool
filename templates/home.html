@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Datamuse API Search</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/altfeatures">Alt Features</a></li>
+        <li><a href="/phonetic_chain">Phonetic Chain</a></li>
+      </ul>
+    </nav>
+    <h1>Datamuse API Search</h1>
+    <form method="POST">
+      <label for="search_word">Search Word:</label>
+      <input type="text" id="search_word" name="search_word"><br><br>
+      <div class="button-group">
+        <button type="submit" name="button" value="Rhymes">Rhymes</button>
+        <button type="submit" name="button" value="Related Words">Related Words</button>
+        <button type="submit" name="button" value="Similar Sound">Similar Sound</button>
+        <button type="submit" name="button" value="Similar Spelling">Similar Spelling</button>
+        <button type="submit" name="button" value="Synonyms">Synonyms</button>
+        <button type="submit" name="button" value="Antonyms">Antonyms</button>
+      </div>
+    </form>
+    {% if words %}
+      <h2>{{ button }} of "{{ search_word }}"</h2>
+      <p>
+        {% for word in words %}
+          <span class="word">{{ word }}</span>{% if not loop.last %}<span class="comma">,</span>{% endif %}
+        {% endfor %}
+      </p>
+    {% endif %}
+  </body>
+</html>
+
+
+

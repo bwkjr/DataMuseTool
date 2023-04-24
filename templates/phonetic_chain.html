@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phonetic Chain</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Phonetic Chain</h1>
+    <form action="/phonetic_chain" method="post">
+        <label for="word">Enter a word:</label>
+        <input type="text" id="word" name="word" required>
+        <button type="submit">Generate Phonetic Chain</button>
+    </form>
+
+    {% if word_chain %}
+        <h2>Phonetic Chain:</h2>
+        <p>{{ " -> ".join(word_chain) }}</p>
+    {% endif %}
+</body>
+</html>

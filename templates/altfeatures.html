@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Alt Features</title>
+    <style>
+        label {
+            display: inline-block;
+            width: 150px;
+            text-align: right;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Alt Features</h1>
+    <form method="get" action="/altfeatures">
+        <div>
+            <label>Means Like:</label>
+            <input type="text" name="ml">
+            <input type="checkbox" name="ml_cb">
+        </div>
+        <div>
+            <label>Sounds Like:</label>
+            <input type="text" name="sl">
+            <input type="checkbox" name="sl_cb">
+        </div>
+        <div>
+            <label>Spelled Like:</label>
+            <input type="text" name="sp">
+            <input type="checkbox" name="sp_cb">
+        </div>
+        <div>
+            <label>Synonyms:</label>
+            <input type="text" name="rel_syn">
+            <input type="checkbox" name="rel_syn_cb">
+        </div>
+        <div>
+            <label>Antonyms:</label>
+            <input type="text" name="rel_ant">
+            <input type="checkbox" name="rel_ant_cb">
+        </div>
+        <div>
+            <label>Triggers:</label>
+            <input type="text" name="rel_trg">
+            <input type="checkbox" name="rel_trg_cb">
+        </div>
+        <div>
+            <label>Kind of:</label>
+            <input type="text" name="rel_spc">
+            <input type="checkbox" name="rel_spc_cb">
+        </div>
+        <div>
+            <label>More general than:</label>
+            <input type="text" name="rel_gen">
+            <input type="checkbox" name="rel_gen_cb">
+        </div>
+        <div>
+            <label>Frequent followers:</label>
+            <input type="text" name="rel_bga">
+            <input type="checkbox" name="rel_bga_cb">
+        </div>
+        <div>
+            <label>Frequent predecessors:</label>
+            <input type="text" name="rel_bgb">
+            <input type="checkbox" name="rel_bgb_cb">
+        </div>
+        <div>
+            <label>Rhymes:</label>
+            <input type="text" name="rel_rhy">
+            <input type="checkbox" name="rel_rhy_cb">
+        </div>
+        <div>
+            <label>Approximate Rhymes:</label>
+            <input type="text" name="rel_nry">
+            <input type="checkbox" name="rel_nry_cb">
+        </div>
+        <div>
+            <input type="submit" value="Search">
+        </div>
+    </form>
+</body>
+</html>
+
+
